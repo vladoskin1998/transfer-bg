@@ -1,0 +1,420 @@
+@import "./fonst.scss";
+@import "./default-style.scss";
+@import "./variables.scss";
+@import "./transfer.scss";
+
+body {
+    font-family: "CeraPro", sans-serif;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+    padding: 0 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.up-button {
+    position: fixed !important;
+    bottom: 50px;
+    right: 5vw;
+    width: 40px;
+    height: 40px;
+    background: $orange1 !important;
+    z-index: 100;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+}
+
+.line {
+    border: 1px solid $orange1;
+}
+
+.navbar {
+    width: 100vw;
+    height: 61px;
+    background: $black1;
+    padding-top: 8px;
+    &__router {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &_container {
+            max-width: 700px;
+            width: 100%;
+        }
+        &_route {
+            display: flex;
+            column-gap: 20px;
+            justify-content: flex-end;
+            width: 100%;
+            & button {
+                font-size: 14px;
+                font-weight: 300;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.navbar__router {
+    & .react-select {
+        &__control {
+            cursor: pointer;
+            background: $black1;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        &__single-value {
+            color: $white;
+        }
+        &__value-container {
+            padding: 0;
+        }
+        &__indicator {
+            padding-left: 0px;
+            & svg {
+                fill: $white;
+            }
+        }
+        &__menu {
+            width: 55px;
+            right: 15px;
+        }
+        &__menu-list {
+            padding: 0;
+            overflow: inherit;
+        }
+        &__option {
+            background-color: inherit;
+            text-align: center;
+            position: relative;
+            padding: 8px 2px;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 51px;
+                top: 0;
+                right: 2px;
+                border-top: 1px solid #c4c4c4;
+            }
+            &:hover {
+                background-color: $black2;
+                color: $white;
+            }
+            &:first-child {
+                position: relative;
+                border-top: 0;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -22px !important;
+                    right: 12px !important;
+                    width: 10px;
+                    height: 10px;
+                    border: 12px solid transparent;
+                    border-bottom: 10px solid $white;
+                }
+                &:hover {
+                    &::before {
+                        color: $white;
+                        border-bottom: 10px solid $black2;
+                    }
+                }
+            }
+            &--is-selected {
+                color: $white;
+                background-color: $black2;
+            }
+            &--is-selected:first-child:before {
+                color: $white;
+                border-bottom: 10px solid $black2;
+            }
+        }
+    }
+}
+
+.main {
+    text-align: center;
+    &__navbar {
+        background: $black1;
+        padding: 41px 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $white;
+        &-title {
+            margin-top: 34px;
+            font-size: 36px;
+            line-height: 45px;
+            font-weight: 500;
+        }
+        &-subtitle {
+            font-size: 30px;
+            line-height: 36px;
+            margin-top: 26px;
+            font-weight: 300;
+        }
+        &-button {
+            margin-top: 35px !important;
+            padding: 20px 30px !important;
+            border-radius: 5px;
+            background: $orange1 !important;
+        }
+    }
+    &__advantage {
+        color: $black;
+        font-weight: 400;
+        padding: 20px 18px 0 18px;
+        &-title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        &-list {
+            grid-template-columns: repeat(4, 1fr) !important;
+            margin: 0 auto !important;
+            max-width: fit-content;
+            margin-top: 40px !important;
+            column-gap: 120px !important;
+            & > div {
+                justify-self: center;
+            }
+            &_subtitle {
+                margin-top: 14px;
+            }
+        }
+    }
+    &__contacts {
+        padding: 0 18px;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        max-width: 700px;
+        &-title {
+            text-align: left !important;
+            color: $black;
+            padding-bottom: 25px;
+        }
+        &-contact {
+            &_list {
+                grid-template-columns: repeat(1, 1fr) !important;
+                column-gap: 18px;
+            }
+        }
+    }
+    &__direction {
+        &-img {
+            margin-top: 30px;
+            width: 100vw;
+        }
+    }
+    &__slider {
+        padding: 40px 18px 0 18px;
+        &-slick {
+            display: grid !important;
+            grid-template-columns: 1fr 700px 1fr;
+            grid-template-rows: 470px 30px;
+            grid-template-areas:
+                "sp sl sn"
+                ". sd ." !important;
+
+            & .slick-prev {
+                grid-area: sp;
+            }
+            & .slick-arrow {
+                align-self: center;
+                justify-self: center;
+                fill: $grey1;
+                cursor: pointer;
+                &:hover {
+                    fill: $grey2;
+                }
+            }
+            & .slick-next {
+                grid-area: sn;
+            }
+            & .slick-list {
+                grid-area: sl;
+            }
+            & .slick-dots {
+                grid-area: sd;
+                display: flex !important;
+                align-self: center;
+                justify-self: center;
+                column-gap: 5px;
+                & button {
+                    display: none;
+                }
+                & li {
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid $black1 !important;
+                    border-radius: 50%;
+                }
+                .slick-active {
+                    background-color: $black1;
+                }
+            }
+            &_img {
+                width: 600px;
+                height: 400px;
+                margin: 0 auto;
+                object-fit: contain;
+                background-repeat: no-repeat;
+            }
+            &_subtitle {
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+    &__notpay {
+        padding: 40px 18px;
+        margin-top: 50px;
+        height: 370px;
+        background-color: $black1;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        &-title {
+            font-weight: 300;
+            font-size: 32px;
+            flex-grow: 1;
+            line-height: 112.02%;
+            & div {
+                color: $orange1;
+            }
+        }
+        &-service {
+            margin: 0 auto;
+            display: grid;
+            width: fit-content;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 120px;
+            & img {
+                margin: 0 auto;
+            }
+            &_item {
+                display: grid;
+                grid-template-rows: 50px;
+                row-gap: 14px;
+                max-width: 125px;
+            }
+        }
+    }
+    &__footer {
+        padding: 40px 18px 90px 18px;
+        &-title {
+            padding-top: 13px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .main__navbar {
+        &-title {
+            font-size: 20px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            column-gap: 7px;
+        }
+        &-subtitle {
+            margin-top: 25px;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+        }
+    }
+    .main__advantage {
+        &-title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 28px;
+        }
+        &-list {
+            margin-top: 29px !important;
+            column-gap: 86px !important;
+            row-gap: 19px !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+    .main__slider-slick {
+        grid-template-columns: 0fr 1fr 0fr;
+        grid-template-rows: 255px 30px;
+        .slick-arrow {
+            display: none !important;
+        }
+        &_img {
+            height: 194px;
+            width: auto;
+        }
+        &_subtitle{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+        }
+    }
+    .main__notpay {
+        &-title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 112.02%;
+        }
+        &-service_item{
+            grid-template-rows: 15px;
+            img{
+                height: 15px;
+                
+            }
+        }
+    }
+    .main__notpay {
+        height: 280px;
+        &-service {
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 20px;
+            & img {
+                width: 15px;
+            }
+            &_item {
+                &--title {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 113.7%;
+                }
+            }
+        }
+    }
+    .main__footer {
+        padding: 20px 18px 30px 18px;
+        &-title {
+            font-weight: 300;
+            font-size: 10px;
+            line-height: 113.7%;
+        }
+    }
+}
+
+// @media only screen and (max-width: 450px) {
+//     .main__navbar{
+//         &-title{
+//             font-size: 20px;
+//             margin-top: 25px;
+//         }
+//         &-subtitle{
+//             font-size: 16px;
+//         }
+//     }
+// }

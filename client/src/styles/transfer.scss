@@ -1,0 +1,96 @@
+.transfer {
+    padding: 40px 18px 50px 18px;
+    .main__advantage-title {
+        margin: 0 auto;
+        width: fit-content;
+    }
+    &__error{
+        &-name{
+            &>div{
+                border: 1px solid red !important;
+            }
+        }
+        &-phone{
+            input{
+                border: 1px solid red !important;
+            }
+        }
+    }
+    &__inputs {
+        margin: 0 auto;
+        margin-top: 50px;
+        display: grid;
+        row-gap: 30px;
+        grid-template-columns: 1fr;
+        max-width: 510px;
+        &-title {
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 19px;
+            color: $grey3;
+        }
+        &-date {
+            margin-top: 10px;
+            display: flex;
+            column-gap: 30px;
+            & > div {
+                width: 100%;
+            }
+        }
+        &-textarea {
+            margin-top: 10px;
+            resize: none;
+            border: 1px solid #c4c4c4 !important;
+            width: 100%;
+            border-radius: 4px;
+            padding: 8px 14px;
+            &:hover {
+                outline: 0 !important;
+                outline-offset: 0 !important;
+                border: 1px solid black !important;
+            }
+        }
+    }
+    .react-select__value-container {
+        padding: 12px 12px !important;
+    }
+    .PhoneInputInput {
+        height: 56px;
+        padding-left: 12px;
+        border: 1px solid hsl(0, 0%, 80%);
+        border-radius: 4px;
+        &:hover {
+            outline: 0 !important;
+            outline-offset: 0 !important;
+            border: 1px solid black !important;
+        }
+    }
+    &__popup {
+        text-align: center;
+        &-navbar{
+            height: 280px;
+            background-color: $black1;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        &-body{
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0 18px;
+            .main__advantage-title{
+                margin-top: 51px;
+            }
+            & svg{
+                margin-top: 40px;
+            }
+        }
+        &-subtitle {
+            padding-top: 40px;
+            font-weight: 300;
+            font-size: 24px;
+            color: $black1;
+        }
+    }
+}
