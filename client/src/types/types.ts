@@ -1,4 +1,4 @@
-import {LanguageEnum} from '../enums/enums'
+import { LanguageEnum } from '../enums/enums'
 
 
 
@@ -7,7 +7,7 @@ export interface SelectInterface<T = string> {
     label: string
 }
 
-export interface LanguageInterface{
+export interface LanguageInterface {
     lang: SelectInterface<LanguageEnum>
 }
 
@@ -28,4 +28,17 @@ export interface TransportDataInterface {
     isBabyChair: boolean,
     babyChair: SelectInterface,
     comments: string
+}
+
+
+export interface GetPriceItemInterface {
+    city: string,
+    price: string,
+    currency: string
+}
+
+
+export interface GetPriceInterface {
+    stambulList: GetPriceItemInterface[],
+    burgasList: GetPriceItemInterface[]
 }

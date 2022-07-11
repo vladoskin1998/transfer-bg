@@ -2,11 +2,13 @@ import React from 'react'
 import './../../styles/style.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from '../main/main';
+import Price from '../price/price';
 import NavBar from '../navbar/navbar';
 import Transfer from '../transfer/transfer';
 import TransferPopup from '../transfer/transfer-popup';
-
-console.log(window.location);
+import { Link } from 'react-scroll';
+import Button from '@mui/material/Button';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const App = () => {
 
@@ -17,8 +19,17 @@ const App = () => {
                 <Route path="/" element={<Main />} />
                 <Route path="/transfer" element={<Transfer />} />
                 <Route path="/transfer/popup" element={<TransferPopup />} />
+                <Route path="/price" element={<Price />} />
             </Routes>
-
+            <Link to="navbar" activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                <Button className='up-button' variant="contained" >
+                    <KeyboardArrowUpIcon />
+                </Button>
+            </Link>
         </BrowserRouter>
     )
 }

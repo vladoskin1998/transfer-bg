@@ -16,7 +16,7 @@ const arrImage = [
 ]
 
 
-const MainAdvantage = ({isPC}:any) => {
+const MainAdvantage = () => {
 
     return (
         <Box className='main__advantage'>
@@ -39,7 +39,9 @@ const MainAdvantage = ({isPC}:any) => {
                         </Box>
                     ))}
             </ImageList>
-            <Box className='line container' sx={{ margin: isPC ? '44px auto 44px' : '35px auto 35px' }} />
+            <Box sx={{ padding: '0 18px' }}>
+                <Box className='line container'/>
+            </Box>
         </Box>
 
     )

@@ -19,12 +19,9 @@ const MainNavbar = ({ isPC }: any) => {
             <Box className='main__navbar-subtitle'>
                 Довезем Вас с любой точки Европы <br />в любую точку Болгарии и обратно
             </Box>
-       
-                <Button className='main__navbar-button' variant="contained" onClick={() => navigation('/transfer')}>
-                    ЗАКАЗАТЬ ТРАНСФЕР
-                </Button>
-     
-
+            <Button className='main__navbar-button' variant="contained" onClick={() => navigation('/transfer')}>
+                ЗАКАЗАТЬ ТРАНСФЕР
+            </Button>
         </Box>
 
 

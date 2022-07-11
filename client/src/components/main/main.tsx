@@ -21,21 +21,13 @@ const Main = () => {
     return (
         <Box className='main'>
             <MainNavbar isPC={isPC} />
-            <MainAdvantage isPC={isPC} />
+            <MainAdvantage />
             <MainContacts />
             <MainDirection />
             <MainSlider />
             <MainNotPay />
             <MainFooter isPC={isPC} />
-            <Link to="navbar" activeClass="active"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}>
-                <Button className='up-button' variant="contained" >
-                    <KeyboardArrowUpIcon />
-                </Button>
-            </Link>
+    
         </Box>
     )
 }

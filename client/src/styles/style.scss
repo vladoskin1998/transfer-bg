@@ -2,6 +2,7 @@
 @import "./default-style.scss";
 @import "./variables.scss";
 @import "./transfer.scss";
+@import "./price.scss";
 
 body {
     font-family: "CeraPro", sans-serif;
@@ -12,7 +13,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .container {
@@ -36,6 +37,8 @@ body {
 
 .line {
     border: 1px solid $orange1;
+    margin: 0 auto;
+    margin: 60px auto 50px;
 }
 
 .navbar {
@@ -53,8 +56,8 @@ body {
         }
         &_route {
             display: flex;
-            column-gap: 20px;
-            justify-content: flex-end;
+            column-gap: 76px;
+            justify-content: center;
             width: 100%;
             & button {
                 font-size: 14px;
@@ -147,7 +150,7 @@ body {
     text-align: center;
     &__navbar {
         background: $black1;
-        padding: 41px 0 50px 0;
+        padding: 50px 18px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -174,7 +177,7 @@ body {
     &__advantage {
         color: $black;
         font-weight: 400;
-        padding: 20px 18px 0 18px;
+        padding: 70px 18px 0 18px;
         &-title {
             font-size: 32px;
             line-height: 40px;
@@ -207,19 +210,40 @@ body {
         }
         &-contact {
             &_list {
-                grid-template-columns: repeat(1, 1fr) !important;
+                grid-template-columns: repeat(2, 1fr) !important;
                 column-gap: 18px;
+                grid-template-areas:
+                    "contact_item1 contact_item4"
+                    "contact_item2 ."
+                    "contact_item3 .";
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                }
+                &-item1 {
+                    grid-area: contact_item1;
+                }
+                &-item2 {
+                    grid-area: contact_item2;
+                }
+                &-item3 {
+                    grid-area: contact_item3;
+                }
+                &-item4 {
+                    grid-area: contact_item4;
+                }
             }
         }
     }
     &__direction {
         &-img {
-            margin-top: 30px;
+            margin-top: 40px;
             width: 100vw;
         }
     }
     &__slider {
-        padding: 40px 18px 0 18px;
+        padding: 70px 18px 0 18px;
         &-slick {
             display: grid !important;
             grid-template-columns: 1fr 700px 1fr;
@@ -281,7 +305,7 @@ body {
     }
     &__notpay {
         padding: 40px 18px;
-        margin-top: 50px;
+        margin-top: 60px;
         height: 370px;
         background-color: $black1;
         color: $white;
@@ -314,7 +338,8 @@ body {
         }
     }
     &__footer {
-        padding: 40px 18px 90px 18px;
+        font-size: 12px;
+        padding: 20px 18px;
         &-title {
             padding-top: 13px;
         }
@@ -322,7 +347,11 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+    .line {
+        margin: 35px auto;
+    }
     .main__navbar {
+        padding: 0 18px 50px 18px;
         &-title {
             font-size: 20px;
             margin-top: 25px;
@@ -338,6 +367,7 @@ body {
         }
     }
     .main__advantage {
+        padding-top: 40px;
         &-title {
             font-weight: 400;
             font-size: 22px;
@@ -350,45 +380,58 @@ body {
             grid-template-columns: repeat(2, 1fr) !important;
         }
     }
-    .main__slider-slick {
-        grid-template-columns: 0fr 1fr 0fr;
-        grid-template-rows: 255px 30px;
-        .slick-arrow {
-            display: none !important;
-        }
-        &_img {
-            height: 194px;
-            width: auto;
-        }
-        &_subtitle{
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 23px;
+    .main__contacts {
+        &-contact_list {
+            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-areas:
+                "contact_item1"
+                "contact_item2"
+                "contact_item3"
+                "contact_item4";
         }
     }
-    .main__notpay {
-        &-title {
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 112.02%;
+    .main__direction {
+        &-img {
+            height: 320px;
+            margin-top: 30px;
+            object-fit: cover;
         }
-        &-service_item{
-            grid-template-rows: 15px;
-            img{
-                height: 15px;
-                
+    }
+    .main__slider {
+        padding-top: 40px;
+        &-slick {
+            grid-template-columns: 0fr 1fr 0fr;
+            grid-template-rows: 255px 30px;
+            .slick-arrow {
+                display: none !important;
+            }
+            &_img {
+                height: 194px;
+                width: auto;
+            }
+            &_subtitle {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 23px;
             }
         }
     }
     .main__notpay {
         height: 280px;
+        margin-top: 50px;
+        &-title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 112.02%;
+        }
         &-service {
             grid-template-columns: repeat(4, 1fr);
             column-gap: 20px;
             & img {
-                width: 15px;
+                width: 20px;
             }
             &_item {
+                grid-template-rows: 20px;
                 &--title {
                     font-weight: 400;
                     font-size: 14px;
@@ -406,15 +449,3 @@ body {
         }
     }
 }
-
-// @media only screen and (max-width: 450px) {
-//     .main__navbar{
-//         &-title{
-//             font-size: 20px;
-//             margin-top: 25px;
-//         }
-//         &-subtitle{
-//             font-size: 16px;
-//         }
-//     }
-// }
