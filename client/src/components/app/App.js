@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from '../main/main';
 import Price from '../price/price';
 import NavBar from '../navbar/navbar';
+import NavList from '../navbar/nav-list';
 import Transfer from '../transfer/transfer';
 import TransferPopup from '../transfer/transfer-popup';
 import { Link } from 'react-scroll';
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/transfer" element={<Transfer />} />
                 <Route path="/transfer/popup" element={<TransferPopup />} />
                 <Route path="/price" element={<Price />} />
+                <Route path="/mobile-menu" element={<NavList />} />
             </Routes>
             <Link to="navbar" activeClass="active"
                 spy={true}
