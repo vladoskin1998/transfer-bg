@@ -4,14 +4,15 @@ import Button from '@mui/material/Button';
 import PriceList from './price-list';
 import { useNavigate } from "react-router-dom";
 import { apiGetPrice } from '../../api/api';
-import { LanguageEnum } from '../../enums/enums';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import { GetPriceInterface } from '../../types/types';
 import { AxiosResponse } from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const Price = () => {
 
+    const { t } = useTranslation()
     const navigation = useNavigate()
     const { lang } = useSelector((s: RootState) => s.Language)
     const [priceLists, setPriceLists] = useState<GetPriceInterface>({
@@ -29,30 +30,25 @@ const Price = () => {
         <Box className='price'>
             <Box className='container'>
                 <Box className='main__advantage-title'>
-                    НАПРАВЛЕНИЯ ИЗ/В <br />
-                    АЭРОПОРТ СТАМБУЛ IST
+                    {t("price.t1")}
                 </Box>
                 <Box className='price__subtitle'>
-                    Трансфер из нового аэропорта Стамбул / в новый аэропорт Стамбул <br />
-                    к черноморским и горнолыжным курортам Болгарии
+                    {t("price.s1")}
                 </Box>
-                <PriceList list={priceLists.stambulList}/>
+                <PriceList list={priceLists.stambulList} />
                 <Box className='price__subtitle price__subfootertitle'>
-                    Мы также предоставляем услугу трансфера из / в аэропорт Сабиха Гекчен, Стамбул SAW.
-                    В связи с удалённостью данного аэропорта и загруженностью дорог в Стамбуле стоимость поездки увеличится на 50 € в сравнении со стоимостью трансфера в новый аэропорт Стамбул.
+                    {t("price.u1")}
                 </Box>
                 <Box className='line'></Box>
                 <Box className='main__advantage-title'>
-                    НАПРАВЛЕНИЯ ИЗ/В <br />
-                    АЭРОПОРТ БУРГАС
+                    {t("price.t2")}
                 </Box>
                 <Box className='price__subtitle'>
-                    Трансфер из аэропорта Бургас / в аэропорт Бургас<br />
-                    к черноморским и горнолыжным курортам Болгарии
+                    {t("price.u2")}
                 </Box>
-                <PriceList list={priceLists.burgasList}/>
+                <PriceList list={priceLists.burgasList} />
                 <Button className='main__navbar-button' variant="contained" onClick={() => navigation('/transfer')}>
-                    ЗАКАЗАТЬ ТРАНСФЕР
+                    {t("home.navbar.buttontransfer")}
                 </Button>
             </Box>
         </Box>

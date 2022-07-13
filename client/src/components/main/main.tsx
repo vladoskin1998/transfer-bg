@@ -7,11 +7,8 @@ import MainDirection from './main-direction';
 import MainSlider from './main-slider';
 import MainNotPay from './main-notpay';
 import MainFooter from './main-footer';
-import Button from '@mui/material/Button';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { createTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Link } from 'react-scroll';
 
 const Main = () => {
 
@@ -27,7 +24,6 @@ const Main = () => {
             <MainSlider />
             <MainNotPay />
             <MainFooter isPC={isPC} />
-    
         </Box>
     )
 }

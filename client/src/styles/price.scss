@@ -1,12 +1,18 @@
 .price {
     padding: 70px 18px 50px 18px;
     text-align: center;
+    .main__advantage-title{
+        max-width: 470px;
+        margin: 0 auto;
+    }
     &__subtitle {
         font-weight: 400;
         font-size: 18px;
         line-height: 23px;
         color: $black1;
         padding-top: 20px;
+        max-width: 700px;
+        margin: 0 auto;
     }
     &__subfootertitle {
         text-align: left !important;

@@ -48,11 +48,8 @@ const MainSlider = () => {
                                 {c.passanger} passanger
                             </Box>
                         </Box>
-
                     )
                 }
-
-
             </Slider>
         </Box>
 

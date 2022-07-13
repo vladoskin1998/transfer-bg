@@ -4,11 +4,13 @@
 @import "./transfer.scss";
 @import "./price.scss";
 @import "./navbar.scss";
+@import "./faq.scss";
 
 body {
     font-family: "CeraPro", sans-serif;
     font-weight: 500;
     overflow-x: hidden;
+    color: $black1;
 }
 
 *,

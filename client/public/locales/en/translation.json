@@ -10,42 +10,81 @@
                 "1": "Transfer Europe",
                 "2": "Bulgaria"
             },
-            "subtitle":"We will take you from anywhere in Europe to anywhere in Bulgaria and back",
+            "subtitle": "We will take you from anywhere in Europe to anywhere in Bulgaria and back",
             "buttontransfer": "BOOK A TRANSFER"
         },
         "advantages": {
-            "title":"WHY WE?",
-            "advantage":{
-                "1":"Always on time",
-                "2":"Experienced drivers",
-                "3":"Comfortable cars",
-                "4":"Nice prices"
+            "title": "WHY WE?",
+            "advantage": {
+                "1": "Always on time",
+                "2": "Experienced drivers",
+                "3": "Comfortable cars",
+                "4": "Nice prices"
             }
         },
-        "contacts":{
-            "title":"If you do not have time to fill out an application, you can simply write / callWhatsApp, Telegram, Viber "
+        "contacts": {
+            "title": "If you do not have time to fill out an application, you can simply write / callWhatsApp, Telegram, Viber"
         },
-        "map":{
-            "title":"MAIN DIRECTIONS"
+        "map": {
+            "title": "MAIN DIRECTIONS"
         },
-        "cars":{
-            "title":"CARS"
+        "cars": {
+            "title": "CARS"
         },
-        "notpay":{
-            "title":{
-                "1":"SERVICES FOR WHICH",
-                "2":"YOU DON'T NEED",
-                "3":"TO PAY"
+        "notpay": {
+            "title": {
+                "1": "SERVICES FOR WHICH",
+                "2": "YOU DON'T NEED",
+                "3": "TO PAY"
             },
-            "notpay":{
-                "1":"Waiting for flight delays flight",
-                "2":"Overnight trips",
-                "3":"Snack: Bars and sodas",
-                "4":"Child's seat"
+            "notpay": {
+                "1": "Waiting for flight delays flight",
+                "2": "Overnight trips",
+                "3": "Snack: Bars and sodas",
+                "4": "Child's seat"
             }
         },
-        "footer":{
-            "title":" Made by Vladislav Chornenkyi & Ruslan Ray 2022"
+        "footer": {
+            "title": " Made by Vladislav Chornenkyi & Ruslan Ray 2022"
         }
+    },
+    "transfer": {
+        "title": "FILL OUT THIS FORM",
+        "name": "Name",
+        "datatitle": "Specify the date and time of the trip",
+        "date": "Date",
+        "time": "Time",
+        "numofpass": "Number of passenger",
+        "fromlocal": "Location: country, city (airport, address)",
+        "tolocal": "Where to: country, city (airport, address)",
+        "phone": "Phone number",
+        "child": "Child's seat",
+        "quantity": "Quantity",
+        "comment": "Your comments/wishes:"
+    },
+    "price": {
+        "t1": "DIRECTIONS TO FROM ISTANBUL AIRPORT",
+        "s1": "Transfer from the new airport Istanbul / to the new airport Istanbul to the Black Sea and ski resorts in Bulgaria",
+        "u1": "We also provide transfer service from/to Sabiha Gökçen Airport, Istanbul SAW. Due to the remoteness of this airport and the traffic congestion in Istanbul the cost of the trip will increase by 50 € compared to the cost of the transfer to the new airport Istanbul.",
+        "t2": "ROUTES FROM/TO BURGAS AIRPORT",
+        "u2": "Transfer from Burgas airport / to Burgas airport to the Black Sea and ski resorts in Bulgaria"
+    },
+    "faq": {
+        "title": "QUESTIONS AND ANSWERS",
+        "question": {
+            "1": "How to order a transfer service?",
+            "2": "What if the flight is delayed?",
+            "3": "In what currency is payment possible and when?",
+            "4": "How can I cancel a transfer?",
+            "5": "How do I find a driver at the airport?"
+        },
+        "answer": {
+            "1": "To order a transfer service, fill out an application on the site, or call / write us on WhatsApp, Telegram, Viber.",
+            "2": "If the application contains a flight number, there is no need to worry. We keep track of our customers' flights and we will meet you.",
+            "3": "You can pay the driver in euros or other currency (as agreed) after the trip.",
+            "4": "You can cancel your trip by sending a message of cancellation to WhatsApp, Telegram, Viber no later than 12 hours before your arrival. ",
+            "5": "When you confirm the trip, you will be given contact with the driver, with whom you will discuss all the details of the meeting and the trip."
+        },
+        "buttonexit":"GO BACK TO THE SITE"
     }
 }

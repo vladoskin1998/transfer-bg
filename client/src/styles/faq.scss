@@ -1,0 +1,39 @@
+.faq {
+    padding: 0 20px 30px 0;
+    max-width: 570px;
+    margin: 0 auto;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    .main__advantage-title {
+        text-align: center;
+        padding: 70px 0px 50px 0px;
+    }
+    &__accordion {
+        box-shadow: none !important;
+        &-question {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 25px;
+        }
+        &-answer {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            padding: 0 20px;
+        }
+    }
+    .main__navbar-button{
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .faq{
+        .main__advantage-title{
+            padding: 50px 0px 30px 0px;
+        }
+    }
+}
