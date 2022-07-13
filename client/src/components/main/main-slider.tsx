@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useTranslation } from 'react-i18next';
 
 const passat = require('../../svg/passat.png') as string
 const mazdamvp = require('../../svg/mazdamvp.png') as string
@@ -28,11 +29,12 @@ const MainSlider = () => {
         prevArrow: <ArrowBackIosIcon sx={{ width: '40px', height: '40px' }} /> as JSX.Element,
     };
 
-    return (
+    const { t } = useTranslation()
 
+    return (
         <Box className='main__slider'>
             <Box className='main__advantage-title'>
-                АВТОМОБИЛИ
+                {t("home.cars.title")}
             </Box>
             <Slider {...settings} >
                 {

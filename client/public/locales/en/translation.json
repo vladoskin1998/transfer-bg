@@ -1,0 +1,51 @@
+{
+    "navbar": {
+        "Home": "Home",
+        "Prices": "Prices",
+        "FAQ": "FAQ"
+    },
+    "home": {
+        "navbar": {
+            "title": {
+                "1": "Transfer Europe",
+                "2": "Bulgaria"
+            },
+            "subtitle":"We will take you from anywhere in Europe to anywhere in Bulgaria and back",
+            "buttontransfer": "BOOK A TRANSFER"
+        },
+        "advantages": {
+            "title":"WHY WE?",
+            "advantage":{
+                "1":"Always on time",
+                "2":"Experienced drivers",
+                "3":"Comfortable cars",
+                "4":"Nice prices"
+            }
+        },
+        "contacts":{
+            "title":"If you do not have time to fill out an application, you can simply write / callWhatsApp, Telegram, Viber "
+        },
+        "map":{
+            "title":"MAIN DIRECTIONS"
+        },
+        "cars":{
+            "title":"CARS"
+        },
+        "notpay":{
+            "title":{
+                "1":"SERVICES FOR WHICH",
+                "2":"YOU DON'T NEED",
+                "3":"TO PAY"
+            },
+            "notpay":{
+                "1":"Waiting for flight delays flight",
+                "2":"Overnight trips",
+                "3":"Snack: Bars and sodas",
+                "4":"Child's seat"
+            }
+        },
+        "footer":{
+            "title":" Made by Vladislav Chornenkyi & Ruslan Ray 2022"
+        }
+    }
+}

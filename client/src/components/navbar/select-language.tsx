@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Select from 'react-select';
 import { LanguageEnum } from '../../enums/enums';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../store/store';
 import { SelectInterface } from '../../types/types'
+import { useTranslation} from 'react-i18next';
 
 const arrLanguage: SelectInterface<LanguageEnum>[] = []
 
@@ -21,17 +20,22 @@ const styles = {
 
 const SelectLanguage = () => {
 
-    const dispatch = useDispatch()
-    const { lang } = useSelector((s: RootState) => s.Language)
+    const [language, setLanguage] = useState<SelectInterface<LanguageEnum>>({ label: LanguageEnum.EN, value: LanguageEnum.EN } )
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lang: any) => {
+        setLanguage(lang)
+        i18n.changeLanguage(lang.value);
+    }
 
     return (
         <Select options={arrLanguage}
-            defaultValue={lang}
+            defaultValue={language}
             classNamePrefix="react-select"
             styles={{ ...styles }}
             blurInputOnSelect={true}
             isSearchable={false}
-            onChange={(e) => dispatch({ type: 'L_CHANGE_LANG', payload: e })}
+            onChange={changeLanguage}
         />
     );
 }

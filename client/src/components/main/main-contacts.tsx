@@ -2,6 +2,7 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { useTranslation} from 'react-i18next';
 
 const va = require('../../svg/whatsapp.png') as string
 const tg = require('../../svg/telegram.png') as string
@@ -18,11 +19,14 @@ const arrContacts = [
 //https://instagram.com/car_please.bg?igshid=YmMyMTA2M2Y=
 
 const MainContacts = () => {
+
+    const { t } = useTranslation()
+
     return (
         <>
             <Box className='main__contacts'>
                 <Box className='main__contacts-title'>
-                    Если у Вас нет времени заполнить заявку, можно просто написать/позвонить в WhatsApp, Telegram, Viber
+                   {t("home.contacts.title")}
                 </Box>
                 {
                     <ImageList className='main__contacts-contact_list' gap={14}>
