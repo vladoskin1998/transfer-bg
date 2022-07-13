@@ -55,12 +55,17 @@
         "date": "Date",
         "time": "Time",
         "numofpass": "Number of passenger",
-        "fromlocal": "Location: country, city (airport, address)",
-        "tolocal": "Where to: country, city (airport, address)",
+        "fromlocal": "Location: city",
+        "tolocal": "Where to: city",
         "phone": "Phone number",
         "child": "Child's seat",
         "quantity": "Quantity",
-        "comment": "Your comments/wishes:"
+        "comment": "Your comments/wishes:",
+        "popup":{
+            "title":"THANKS FOR THE ORDER",
+            "subtitle":"The application has been successfully sent",
+            "undertitle":"You will be contactedin the near future"
+        }
     },
     "price": {
         "t1": "DIRECTIONS TO FROM ISTANBUL AIRPORT",
@@ -85,6 +90,6 @@
             "4": "You can cancel your trip by sending a message of cancellation to WhatsApp, Telegram, Viber no later than 12 hours before your arrival. ",
             "5": "When you confirm the trip, you will be given contact with the driver, with whom you will discuss all the details of the meeting and the trip."
         },
-        "buttonexit":"GO BACK TO THE SITE"
+        "buttonexit": "GO BACK TO THE SITE"
     }
 }

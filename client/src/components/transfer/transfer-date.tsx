@@ -6,21 +6,23 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import TextField from '@mui/material/TextField';
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../store/store'
+import { useTranslation } from 'react-i18next';
 
 const TransferDate = () => {
 
     const dispatch = useDispatch()
     const { time, date } = useSelector((s: RootState) => s.TransferData)
-
+    const { t } = useTranslation()
+    
     const handleChange = (newValue: Date | string) => {
         dispatch({ type: "TD_TIME", payload: newValue })
-    };
-
+    }
+    
     return (
         <LocalizationProvider dateAdapter={AdapterDateFns}>
             <Box>
                 <Box className='transfer__inputs-title'>
-                    Укажите дату и время поездки
+                    {t("transfer.datatitle")}
                 </Box>
                 <Box className='transfer__inputs-date'>
                     <DesktopDatePicker

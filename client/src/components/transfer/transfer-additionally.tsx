@@ -6,6 +6,7 @@ import FormGroup from '@mui/material/FormGroup';
 import Select from 'react-select'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../store/store'
+import { useTranslation } from 'react-i18next';
 
 const styles = {
     control: (base: any) => ({ ...base, boxShadow: '0 !important', '&:hover': { border: '1px solid black !important' } }),
@@ -17,7 +18,8 @@ const TransferAdditionally = () => {
 
     const dispatch = useDispatch()
     const { isBabyChair } = useSelector((s: RootState) => s.TransferData)
-
+    const { t } = useTranslation()
+    
     return (
         <>
             <Box sx={{ width: '50%' }}>
@@ -26,14 +28,14 @@ const TransferAdditionally = () => {
                         <Checkbox value={isBabyChair}
                             onChange={() => dispatch({ type: 'TD_IS_BABY_CHAIR' })}
                         />
-                    } label="Детское кресло"
+                    } label={t("transfer.child")}
                     />
                 </FormGroup>
                 <Select
                     options={options}
                     classNamePrefix="react-select"
                     styles={{ ...styles }}
-                    placeholder='Количество'
+                    placeholder={t("transfer.quantity")}
                     isSearchable={false}
                     onChange={(e) => dispatch({ type: 'TD_BABY_CHAIR', payload: e })}
                 />

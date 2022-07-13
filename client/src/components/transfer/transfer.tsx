@@ -14,12 +14,14 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import * as Scroll from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 
 let scroll = Scroll.animateScroll;
 
 const Transfer = () => {
 
     const dispatch = useDispatch()
+        const { t } = useTranslation()
     const navigation = useNavigate()
     const { TransferData } = useSelector((s: RootState) => s)
     const [validation, setValidation] = useState({
@@ -47,11 +49,11 @@ const Transfer = () => {
     return (
         <Box className='transfer'>
             <Box className='main__advantage-title' >
-                ЗАПОЛНИТЕ ЗАЯВКУ
+                {t('transfer.title')}
             </Box>
             <Box className='transfer__inputs'>
                 <TextField className={validation.name && !TransferData.name ? 'transfer__error-name' : ''}
-                    placeholder='Имя'
+                    placeholder={t("transfer.name")}
                     variant="outlined"
                     value={TransferData.name}
                     onChange={(e) => dispatch({ type: 'TD_NAME', payload: e.target.value })}
@@ -59,7 +61,7 @@ const Transfer = () => {
                 <TransferDate />
                 <TransferLocation />
                 <PhoneInput className={validation.phone && !TransferData.phone ? 'transfer__error-phone' : ''}
-                    placeholder='Номер телефона'
+                    placeholder={t("transfer.numofpass")}
                     value={TransferData.phone}
                     onChange={(e) => dispatch({ type: 'TD_PHONE', payload: e })}
                 />
@@ -67,7 +69,7 @@ const Transfer = () => {
                 <TransferAdditionally />
                 <Box>
                     <Box className='transfer__inputs-title'>
-                        Ваши комментарии/пожелания:
+                        {t("transfer.comment")}
                     </Box>
                     <TextareaAutosize
                         className='transfer__inputs-textarea'

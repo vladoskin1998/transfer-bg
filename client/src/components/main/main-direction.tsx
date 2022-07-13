@@ -11,7 +11,7 @@ const MainDirection = () => {
     return (
         <Box className='main__direction'>
             <Box className='main__advantage-title'>
-                {t("home.map")}
+                {t("home.map.title")}
             </Box>
             <Box component='img'
                 className='main__direction-img'
