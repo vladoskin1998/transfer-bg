@@ -20,7 +20,6 @@ export interface CoordInterface {
 export interface TransportDataInterface {
     name: string,
     date: Date | null | string,
-    time: null | string,
     passengers: SelectInterface,
     cityFrom: SelectInterface<CoordInterface | string>,
     cityTo: SelectInterface<CoordInterface | string>,

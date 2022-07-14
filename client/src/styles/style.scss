@@ -90,7 +90,9 @@ body {
                 justify-self: center;
             }
             &_subtitle {
-                margin-top: 14px;
+                max-width: 90px;
+                width: min-content !important;
+                margin: 14px auto 0;
             }
         }
     }
@@ -290,7 +292,7 @@ body {
     }
     .main__direction {
         &-img {
-            height: 320px;
+            height: 77vw;
             margin-top: 30px;
             object-fit: cover;
         }

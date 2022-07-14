@@ -2,7 +2,7 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const time = require('../../svg/time.png') as string
 const wheel = require('../../svg/wheel.png') as string
@@ -11,7 +11,7 @@ const auto = require('../../svg/auto.png') as string
 
 const MainAdvantage = () => {
 
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const arrImage = [
         { img: time, label: t("home.advantages.advantage.1") },
@@ -35,15 +35,12 @@ const MainAdvantage = () => {
                                 alt={'image'}
                                 loading="lazy"
                             />
-                            <Box width={80} className='main__advantage-list_subtitle'>
+                            <Box className='main__advantage-list_subtitle'>
                                 {item.label}
                             </Box>
                         </Box>
                     ))}
             </ImageList>
-            <Box sx={{ padding: '0 18px' }}>
-                <Box className='line container'/>
-            </Box>
         </Box>
 
     )

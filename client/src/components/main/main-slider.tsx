@@ -12,7 +12,7 @@ const mazda = require('../../svg/mazda.png') as string
 
 const arrCars = [
     { img: mazda, label: 'ECONOM', passanger: 4 },
-    { img: passat, label: '+COMFORT', passanger: 4 },
+    { img: passat, label: 'COMFORT', passanger: 4 },
     { img: mazdamvp, label: 'MINIBUS', passanger: 4 },
 ]
 

@@ -1,10 +1,14 @@
-import { TransportDataInterface } from '../types/types'
+import { TransportDataInterface } from '../types/types';
+import moment from 'moment';
+
 const emptySelect = { label: '', value: '' }
+
+
+//"2022-07-20T21:00:00.000Z"
 
 const initState: TransportDataInterface = {
     name: '',
-    date: new Date(),
-    time: '00:00',
+    date: moment().format('YYYY-MM-DDTHH:mm'),
     passengers: emptySelect,
     cityFrom: emptySelect,
     cityTo: emptySelect,
@@ -23,10 +27,16 @@ export const TransferData = (state = initState, action: { type: string, payload:
             state = { ...state, name: action.payload }
             return state
         case "TD_DATE":
-            state = { ...state, date: action.payload }
+            state = {
+                ...state,
+                date: `${action.payload}T${moment(state.date).format('HH:mm')}`
+            }
             return state
         case "TD_TIME":
-            state = { ...state, time: action.payload }
+            state = {
+                ...state,
+                date: `${moment(state.date).format('YYYY-MM-DD')}T${action.payload}`
+            }
             return state
         case "TD_CITY_FROM":
             state = { ...state, cityFrom: action.payload }
@@ -41,7 +51,11 @@ export const TransferData = (state = initState, action: { type: string, payload:
             state = { ...state, passengers: action.payload }
             return state
         case "TD_IS_BABY_CHAIR":
-            state = { ...state, isBabyChair: !state.isBabyChair }
+            state = {
+                ...state,
+                isBabyChair: !state.isBabyChair,
+                babyChair: emptySelect
+            }
             return state
         case "TD_BABY_CHAIR":
             state = { ...state, babyChair: action.payload }

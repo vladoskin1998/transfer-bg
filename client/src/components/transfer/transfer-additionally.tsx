@@ -24,7 +24,7 @@ const TransferAdditionally = () => {
         <>
             <Box sx={{ width: '50%' }}>
                 <FormGroup>
-                    <FormControlLabel control={
+                    <FormControlLabel className="transfer__checkbox" control={
                         <Checkbox value={isBabyChair}
                             onChange={() => dispatch({ type: 'TD_IS_BABY_CHAIR' })}
                         />
@@ -32,6 +32,7 @@ const TransferAdditionally = () => {
                     />
                 </FormGroup>
                 <Select
+                    isDisabled={!isBabyChair}
                     options={options}
                     classNamePrefix="react-select"
                     styles={{ ...styles }}
